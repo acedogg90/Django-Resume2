@@ -1,0 +1,230 @@
+/* * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Euclid Circular A", Poppins;
+    color: #f9f9f9;
+    background: linear-gradient(
+      100deg,
+      #000000,
+      #252525,
+      #151515,
+      #6f6f6f
+    );
+    height: 100vh;
+    background-size: 400% 400% !important;
+    animation: gradient 15s ease infinite;
+    background-attachment: fixed;
+  }
+  
+  /* CSS for screens with a maximum width of 768px (e.g., mobile devices) */
+  
+  /* @media screen and (max-width: 768px) {
+    .base-main {
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+  }
+  
+  /* CSS for screens wider than 768px */
+  
+  /* @media screen and (min-width: 769px) {
+    .base-main {
+      margin-left: 20em;
+      margin-right: 20em;
+    }
+  } */
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .burger,
+  .menu {
+    position: fixed;
+  }
+  
+  .burger {
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 88px;
+    height: 88px;
+    background-image: url("menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  body.open .burger {
+    background-image: url("close.svg");
+  }
+  
+  .menu {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 400px;
+    height: calc(100% - 20px);
+    background: #07030a;
+    translate: -100% 0;
+    transition: translate 0.375s cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+  
+  .menu nav {
+    opacity: 0;
+  }
+  
+  @keyframes menu-in {
+    0% {
+      clip-path: ellipse(60% 60% at 0% 50%);
+    }
+    100% {
+      clip-path: ellipse(120% 120% at 0% 50%);
+    }
+  }
+  
+  body.open .menu {
+    opacity: 1;
+    visibility: visible;
+    translate: 0;
+    animation: menu-in 0.375s;
+  }
+  
+  body.open .menu nav {
+    opacity: 1;
+  }
+  
+  .menu nav:hover a {
+    opacity: 0.25;
+  }
+  
+  .menu nav a:hover {
+    opacity: 1;
+  }
+  
+  .menu nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu a {
+    position: relative;
+    color: #f9f9f9;
+    font-size: 32px;
+    font-family: "Euclid Circular A", Poppins;
+    padding: 20px 0;
+    width: 300px;
+    text-decoration: none;
+    transition: 0.4s;
+  }
+  
+  .menu a::before,
+  .menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+  
+  .menu a::before {
+    opacity: 0;
+    background: rgb(255 255 255 / 20%);
+  }
+  
+  .menu a::after {
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    background: #f7f7f7;
+  }
+  
+  .menu a:hover::before {
+    opacity: 1;
+  }
+  
+  .menu a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  body.open .menu a {
+    animation: appear 0.25s backwards;
+  }
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      translate: -30px 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .base-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    place-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .base-body {
+    display: grid;
+    place-items: center;
+  }
+  
+  .base-text {
+    max-width: fit-content;
+  }
+  
+  
+  
+  .base-title::first-letter {
+    color: #a0a0a0;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: 0.01em; /* add a bit of spacing to the right of the first letter */
+  }
+  
+  
+  .about-image {
+    border-radius: 2em;
+    max-block-size: 20em;
+    margin: 2em;
+  }
+  
+  .edu-box {
+    text-align: right;
+  }
+  
+  .button1 {
+    max-block-size: 10em;
+    border-radius: 2em;
+    margin: 2em;
+  } 

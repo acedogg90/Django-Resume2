@@ -1,0 +1,25 @@
+<!-- webapp/templates/webapp/home.html -->
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <div>
+        <img src="{% static 'webapp/images/profilephoto01.jpg' %}" alt="Profile Picture" class="about-image">
+    </div>
+    <p>
+        As a highly motivated entry-level front-end developer, I am proficient in programming languages such as HTML, CSS, JavaScript, SQL, Python, React, and API's. I possess a strong grasp of accessibility standards and a solid understanding of UI/UX design, cross-browser compatibility, and general web functions and standards. 
+        <br><br> In addition, I have developed an understanding of containerization using Docker and gained a basic level understanding of version control through GitHub. I have pulled open-source projects from GitHub to learn basic version control, Django Rest Frameworks, algorithms, UX/UI design, web scraping, and predictive modeling. I am also constantly enhancing my knowledge and skills through various online resources such as W3 Schools, Hacker Rank, Solo Learn, Replit, YouTube, and Free Code Academy. 
+        <br><br> My objective is to secure a position where I can apply my hands-on experience with web applications and programming languages to build innovative and creative digital solutions. I am eager to join a dynamic team that values innovation, creativity, and teamwork.
+    </p>
+</body>
+</html>
+{% endblock content %}
